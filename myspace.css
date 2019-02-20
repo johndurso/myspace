@@ -1,0 +1,455 @@
+body {
+	background: pink;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	background: #ededed;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #1559BB;
+	transition: 0.2s ease all;
+}
+
+a:hover {
+	color: #FFCE95;
+}
+
+.container {
+	background: #fff;
+	width: 95%;
+	max-width: 960px;
+	margin: auto;
+}
+
+header {
+	position: relative;
+	background: #1559BB;
+	padding: 10px;
+	display: grid;
+}
+
+.google {
+	justify-content: space-between;
+	grid-row: 1;
+	grid-column: 2/4;
+	text-align: right;
+	font-size: 8px;
+	color: #fff;
+	line-height: 0;
+}
+
+header button#menuToggle {
+	z-index: 1000;
+	position: absolute;
+	top: 5px;
+	left: 2px;
+	background: transparent;
+	outline: 0;
+	border: 0;
+	display: none;
+}
+
+header button#menuToggle svg {
+	fill: #fff;
+	width: 40px;
+	height: 40px;
+}
+
+.nav {
+	grid-column: 1/4;
+	grid-row: 3;
+	margin: 15px 0 0 0;
+	display: flex;
+}
+
+.nav div {
+	padding: 3px 10px;
+	color: #fff;
+}
+
+
+.nav div a {
+	color: #fff;
+	font-weight: normal;
+}
+
+.nav div a:hover {
+	color: #FFCE95;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 44% 54%;
+	margin-top: 30px;
+}
+
+.left {
+	grid-column: 1;
+	padding: 0 30px;
+}
+
+.profile {
+	display: grid;
+	grid-gap: 1em;
+	align-items: center;
+}
+
+.profile .profilePicture {
+	grid-column: 1/2;
+	text-align: center;
+	margin: auto;
+}
+
+.profile .profileInfo {
+	grid-column: 2/4;
+}
+
+.profile .profileInfo p {
+	line-height: 4px;
+	font-size: 13px;
+}
+
+.onlineNow {
+	position: relative;
+	margin-left: 20px;
+	padding: 15px 0;
+	color: green;
+	font-weight: bold;
+	font-size: 12px;
+}
+.onlineNow:before {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: -25px;
+	display: block;
+	height: 20px;
+	width: 20px;
+	background: url('images/online.gif');
+	background-size: cover;
+}
+
+.tagline {
+	display: block;
+	margin: 10px 0 25px 0;
+}
+
+.contact {
+	border: 1px solid #ccc;
+}
+
+.contact h3,
+.userDetails h3 {
+	background: #639BD0;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 5px 10px;
+	margin: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.contactNav ul {
+	margin: 0;
+	list-style: none;
+	display: inline-block;
+}
+
+.contactNav ul li {
+	position: relative;
+	padding: 5px 8px;
+}
+
+.contactNav ul li a {
+	font-size: 12px;
+	transition: 0.2s ease all;
+}
+
+.contactNav ul li svg {
+	position: absolute;
+	top: 6px;
+	left: -20px;
+	display: block;
+	height: 15px;
+	width: 15px;
+	background-size: cover;
+	fill: #ccc;
+	transition: 0.2s ease all;
+}
+
+.contactNav ul li:hover a,
+ .contactNav ul li:hover svg{
+	color: #FFCE95;
+	fill: #FFCE95;
+}
+
+.userUrl {
+	padding: 5px;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+}
+
+.userUrl h4 {
+	margin: 0;
+}
+
+.musicPlayer {
+	position: relative;
+	border: 1px solid #333;
+	background: linear-gradient(#eee, #ccc);
+	padding: 5px;
+	margin-bottom: 20px;
+	height: 42px;
+}
+
+.musicPlayer button {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	border-radius: 100%;
+	height: 40px;
+	width: 40px;
+	background: #eee;
+	text-align: center;
+	overflow: hidden;
+}
+
+.musicPlayer button svg {
+	position: absolute;
+}
+
+.musicPlayer #playSong {
+	opacity: 1;
+}
+
+#playSong svg {
+	top: 7px;
+	left: 9px;
+}
+
+.musicPlayer #pauseSong {
+	opacity: 0;
+	display: none;
+}
+
+#pauseSong svg {
+	top: 7px;
+	left: 7px;
+}
+
+.musicPlayer button:focus {
+	border-color: #ccc;
+}
+
+.musicPlayer button:hover {
+	cursor: pointer;
+}
+
+.musicPlayer button:hover svg {
+	fill: #666;
+}
+
+.musicPlayer .songName {
+	position: absolute;
+	right: 14px;
+	top: 13px;
+	background: #333;
+	color: #fff;
+	border-radius: 5px;
+	display: inline-block;
+	width: 80%;
+	margin-top: -5px;
+	text-shadow: 0px 3px 0px #333;
+}
+
+.musicPlayer .songName #playing {
+	z-index: 0;
+	position: absolute;
+	bottom: 0;
+	right: 40px;
+	background-image: url('images/playing.gif');
+	background-size: cover;
+	height: 22px;
+	width: 75px;
+	opacity: 0;
+	display: none;
+}
+
+.show {
+	opacity: 1.0 !important;
+	display: block !important;
+}
+
+.musicPlayer span {
+	display: block;
+	font-size: 12px;
+	padding: 2px 0 2px 5px;
+}
+
+.musicPlayer span.title,
+.musicPlayer span.artist {
+	text-shadow: 0px 0px 5px #000;
+}
+
+.musicPlayer span.title {
+	z-index: 1;
+	position: relative;
+	font-weight: bold;
+}
+
+.musicPlayer span.artist {
+	z-index: 1;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.userDetails {
+	border: 1px solid #ccc;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.userDetails th {
+	padding: 2px;
+	font-size: 12px;
+}
+
+.userDetails th:first-child {
+	background: #B0D0F2;
+	color: #527DAB;
+	width: 120px;
+}
+
+.userDetails th:last-child {
+	background: #D6EBF7;
+	width: 226px;
+	font-weight: normal;
+}
+
+.right {
+	grid-column: 2;
+}
+
+.right .network {
+	text-align: center;
+	padding: 20px 10px;
+	border: 1px solid #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.right h3 {
+	display:  block;
+	background: #FFCE95;
+	color: #FD741B;
+	padding: 2px 10px;
+	font-size: 14px;
+}
+
+.right .blurb h4 {
+	color: #FD741B;
+	margin: 0;
+	padding: 0;
+}
+
+.right .blurb p {
+	padding: 0;
+	margin:0 0 20px 0;
+}
+
+.top8 {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 10px;
+	margin-bottom: 30px;
+	justify-content: space-around;
+}
+
+.top8 div {
+	text-align: center;
+	line-height: 1.8em;
+}
+
+.top8 div img {
+	display: block;
+	height: 80px;
+	width: 80px;
+	margin: auto;
+	border-radius: 5px;
+	border: 3px solid transparent;
+}
+
+.top8 div a:hover img {
+  border-color: #FFCE95;
+}
+
+@media screen and (max-width: 940px) {
+	.musicPlayer .songName {
+		width: 70%;
+	}
+	.musicPlayer .songName #playing {
+		right: 5px;
+		width: 150px;
+	}
+}
+
+@media screen and (max-width: 732px) {
+	#menuToggle {
+		display: block !important;
+	}
+	.showNav {
+		height: 100% !important;
+	}
+	.open svg {
+		fill: #FFCE95;
+	}
+	.nav {
+		flex-direction: column;
+		text-align: center;
+		height: 0;
+		overflow: hidden;
+	}
+	.nav div a {
+		width: 100%;
+		padding: 10px 0;
+		display: block;
+	}
+	.nav div:nth-child(8) {
+		display: none;
+	}
+
+	.profile {
+		justify-content: center;
+	}
+
+	.profile .profilePicture {
+		grid-column: 1/4;
+		grid-row: 1;
+		text-align: center;
+		margin: auto;
+	}
+
+	.profile .profileInfo {
+		grid-column: 1/4;
+		grid-row: 2;
+	}
+
+	.userUrl {
+		font-size: 10px;
+	}
+
+	span.title,
+	span.artist {
+		font-size: 9px !important;
+	}
+
+	.top8 {
+		grid-template-columns: auto auto auto;
+	}
+}
