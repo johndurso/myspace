@@ -1,4 +1,5 @@
 body {
+	background: pink;
 	width: 100%;
 	margin: auto;
 	padding: 0;
@@ -45,8 +46,8 @@ header {
 header button#menuToggle {
 	z-index: 1000;
 	position: absolute;
-	top: 14px;
-	left: 7px;
+	top: 6px;
+	left: 0px;
 	background: transparent;
 	outline: 0;
 	border: 0;
