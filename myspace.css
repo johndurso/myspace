@@ -1,5 +1,4 @@
 body {
-	background: pink;
 	width: 100%;
 	margin: auto;
 	padding: 0;
@@ -46,8 +45,8 @@ header {
 header button#menuToggle {
 	z-index: 1000;
 	position: absolute;
-	top: 5px;
-	left: 2px;
+	top: 14px;
+	left: 7px;
 	background: transparent;
 	outline: 0;
 	border: 0;
@@ -391,11 +390,11 @@ header button#menuToggle svg {
 
 @media screen and (max-width: 940px) {
 	.musicPlayer .songName {
-		width: 70%;
+		width: 75%;
 	}
 	.musicPlayer .songName #playing {
 		right: 5px;
-		width: 150px;
+		width: 120px;
 	}
 }
 
@@ -407,7 +406,24 @@ header button#menuToggle svg {
 		height: 100% !important;
 	}
 	.open svg {
-		fill: #FFCE95;
+		transform: rotate(135deg);
+	}
+
+	#menuToggle svg:hover {
+		cursor: pointer;
+	}
+
+	#menuToggle svg {
+		transition: 0.2s ease all;
+	}
+	#menuToggle svg.close {
+		display: none;	
+	}
+	#menuToggle.open svg.opened {
+		display: none !important;
+	}
+	#menuToggle.open svg.close {
+		display: block !important;
 	}
 	.nav {
 		flex-direction: column;
@@ -444,12 +460,61 @@ header button#menuToggle svg {
 		font-size: 10px;
 	}
 
+	.musicPlayer .songName {
+		width: 68%;
+	}
+
 	span.title,
 	span.artist {
-		font-size: 9px !important;
+		font-size: 10px !important;
+	}
+
+	.songName {
+		line-height: 12px;
 	}
 
 	.top8 {
 		grid-template-columns: auto auto auto;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.left {
+		grid-column: 1/4;
+		grid-row: 1;
+		max-width: 400px;
+		margin: 0px auto 20px auto;
+	}
+
+	.profile .profilePicture {
+		grid-column: 1/2;
+		grid-row: 1;
+		text-align: center;
+		margin: auto;
+	}
+
+	.profile .profileInfo {
+		grid-column: 3/4;
+		grid-row: 1;
+	}
+
+	.userDetails {
+		margin: 0;
+	}
+
+	.musicPlayer {
+		max-width: 250px;
+		margin: 20px auto 20px auto;
+	}
+
+	.right {
+		grid-column: 1/4;
+		grid-row: 2;
+		max-width: 360px;
+		margin: auto;
+	}
+	.right .network {
+		font-size: 14px;
+		padding: 0;
 	}
 }
