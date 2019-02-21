@@ -1,5 +1,4 @@
 body {
-	background: pink;
 	width: 100%;
 	margin: auto;
 	padding: 0;
@@ -33,7 +32,7 @@ header {
 	display: grid;
 }
 
-.google {
+.search {
 	justify-content: space-between;
 	grid-row: 1;
 	grid-column: 2/4;
